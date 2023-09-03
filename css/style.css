@@ -1,0 +1,155 @@
+/* LOADING */
+
+:root {
+  --contact-placeHolder-color: #262626;
+  --search-placeHolder-color: #e5e5e5;
+
+}
+
+#contact .form-control::placeholder {
+  color: var(--contact-placeHolder-color);
+  opacity: 0.9;
+}
+
+#search .form-control::placeholder {
+  color: var(--search-placeHolder-color);
+  opacity: 0.9;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f695;
+  top: 100%;
+  left: 0;
+  transition: all 1s;
+}
+
+.meal {
+  overflow: hidden;
+}
+
+.meal:hover .layer {
+  top: 0;
+}
+
+.meal:hover {
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+#sideBar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 999;
+  padding: 0.5rem;
+  color: white;
+}
+
+.sideBarOuter {
+  background-color: white;
+}
+
+.logo-img {
+  width: 3rem;
+}
+
+.menu-icon,
+.fa-times,
+.links,
+.areas,
+.ingredients {
+  cursor: pointer;
+}
